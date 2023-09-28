@@ -1,23 +1,26 @@
 ﻿// Emmanuel
 
+using System;
 
-double cadAmount, usdamount, euramount;
+double cadAmount, usdAmount, eurAmount;
 
-Console.WriteLine("hello, customer" + "Please enter you're money value (CAD):");
+Console.WriteLine("Please enter you're Name Sir/Miss");
+string name = Console.ReadLine();
+Console.WriteLine("Welcome " + name);
+
+Console.WriteLine("Welcome the bank of Wopper's,Please enter you're money value in (CAD):");
+
 if (double.TryParse(Console.ReadLine(), out cadAmount))
 {
-    usdamount = cadAmount * 0.79; //tAUX DE change CAD vers USD
-    euramount = cadAmount * 0.68; //taux de change CAD vers EUR
+    usdAmount = cadAmount * 0.79; // Taux de change CAD vers USD
+    eurAmount = cadAmount * 0.68; // Taux de change CAD vers EUR
 
-    object usdAmount = null;
     Console.WriteLine($"Montant en dollars américains (USD) : {usdAmount:C}");
-    object eurAmount = null;
     Console.WriteLine($"Montant en euros (EUR) : {eurAmount:C}");
 }
 else
 {
-    Console.WriteLine("Montant invalide. Assurez-vous d'entrer un nombre valide.");
+    Console.WriteLine("Money Unavalable, Plese make sure to enter the right amount");
 }
 
 Console.ReadKey();
-//declare before closing
