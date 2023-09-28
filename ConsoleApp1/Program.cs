@@ -15,6 +15,7 @@ if (double.TryParse(Console.ReadLine(), out cadAmount))
     usdAmount = cadAmount * 0.79; // Taux de change CAD vers USD
     eurAmount = cadAmount * 0.68; // Taux de change CAD vers EUR
 
+    Console.ForegroundColor = ConsoleColor.Green;
     Console.WriteLine($"Montant en dollars américains (USD) : {usdAmount:C}");
     Console.WriteLine($"Montant en euros (EUR) : {eurAmount:C}");
 }
@@ -22,5 +23,9 @@ else
 {
     Console.WriteLine("Money Unavalable, Plese make sure to enter the right amount");
 }
+
+Console.WriteLine("Thank you for visiting,The bank of Wopper's");
+    
+
 
 Console.ReadKey();
